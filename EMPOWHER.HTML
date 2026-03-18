@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EmpowHer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 0;
+      background-color: #fff0f5;
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background: #d63384;
+      color: white;
+      padding: 30px 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header .logo {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 15px auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    header .logo:hover { transform: scale(1.1); }
+    header h1, header p { font-family: 'Parisienne', cursive; margin: 5px 0; }
+    header h1 { font-size: 50px; }
+    header p { font-size: 20px; }
+
+    /* Navigation */
+    nav {
+      background: #d63384;
+      text-align: center;
+      padding: 12px;
+      position: sticky;
+      top: 110px;
+      z-index: 99;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover { color: #ff4fa3; transform: scale(1.1); }
+
+    /* Section styling */
+    section {
+      padding: 50px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    section:nth-of-type(1) { animation-delay: 0.2s; }
+    section:nth-of-type(2) { animation-delay: 0.4s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section h2 {
+      font-family: 'Parisienne', cursive;
+      font-size: 36px;
+      color: #d63384;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Columns for Mission & Vision */
+    .columns {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .column {
+      background-color: #fff0f5;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      max-width: 320px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+    .column h2 { font-family: 'Parisienne', cursive; font-size: 28px; margin-bottom: 10px; }
+    .column p { font-family: "Times New Roman", serif; font-size: 16px; color: #333; line-height: 1.6; }
+
+    /* Container for sections */
+    .container { max-width: 900px; margin: 0 auto; flex: 1; }
+
+    /* Smooth scroll link offset fix */
+    section::before {
+      content: "";
+      display: block;
+      height: 120px;
+      margin-top: -120px;
+      visibility: hidden;
+    }
+
+    /* Contact link style */
+    .contact-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #d63384;
+      transition: color 0.3s ease;
+    }
+    .contact-link:hover { color: #ff4fa3; }
+
+    /* Footer */
+    footer {
+      background: #d63384;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-family: "Times New Roman", serif;
+      font-size: 16px;
+      margin-top: auto;
+      width: 100%;
+      box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/652266677_122101245357075572_4875988694674087752_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=WxFJd5S_3tIQ7kNvwE5ei0Y&_nc_oc=AdkT5CqxPx1z85ytDbCokJZjHNZp0i0t4zaiuTL8nYv7LNZaq-KL3YmbmM9xAOZlWCY&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&_nc_gid=zJDmtBuJQvyOYUv8I9tlag&_nc_ss=8&oh=00_Afx9aOOx4IkanNuQLjrWXv65AuJNUIsrRCNSjjIpAPBhdw&oe=69C06F40" 
+         alt="EmpowHer Logo" class="logo">
+    <h1>EmpowHer</h1>
+    <p>A woman led revolution.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="container">
+    <h2>Home</h2>
+    <p>Hello! Welcome to EmpowHer. This website celebrates women leaders and inspires creativity, empowerment, and action.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About EmpowHer</h2>
+    <div class="columns">
+      <div class="column">
+        <h2>Mission</h2>
+        <p>The EmpowHer campaign strives to inspire women to rise with confidence, break the stereotypes, and lead positive change in the society.</p>
+      </div>
+      <div class="column">
+        <h2>Vision</h2>
+        <p>A society where gender is no longer a barrier to opportunity, safety, or leadership and where every women's voice is a catalyst for inclusive progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>
+      <a class="contact-link" href="https://www.facebook.com/profile.php?id=61582267181590" target="_blank">EmpowHer Facebook Page</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    2026 EmpowHer | Empowering Women Everywhere
+  </footer>
+
+</body>
+</html>
